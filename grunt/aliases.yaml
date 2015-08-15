@@ -1,0 +1,40 @@
+default:
+  description: 'Default (production) build'
+  tasks:
+    - 'test'
+less-sass:
+  description: 'Convert LESS files into SASS'
+  tasks:
+    - 'lessToSass'
+    - 'copy:less'
+    - 'clean:sass-temp'
+prod:
+  description: 'Production build'
+  tasks:
+    - 'less-sass'
+    - 'clean:prod'
+    - 'less:prod'
+    - 'pleeease:prod'
+    - 'pleeease:prod-min'
+    - 'copy:js'
+    - 'uglify:prod'
+prepare-libs:
+  description: 'Move files to tests/lib folder from bower_components'
+  tasks:
+    - 'clean:tests-lib'
+    - 'copy:jquery'
+    - 'copy:animateCSS'
+    - 'copy:onScreen'
+    - 'copy:qunit'
+prepare-dev:
+  description: 'Prepare CSS file for tests'
+  tasks:
+    - 'less:dev'
+    - 'pleeease:dev'
+    - 'uglify:dev'
+test:
+  description: 'Move files to tests/lib folder from bower_components'
+  tasks:
+    - 'prepare-libs'
+    - 'prepare-dev'
+    - 'qunit'
