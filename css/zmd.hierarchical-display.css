@@ -1,0 +1,72 @@
+/*!
+ *  Material Design Hierarchical Display by Sergey Kupletsky (@zavoloklom) - https://github.com/zavoloklom/material-design-hierarchical-display/
+ *  License - https://github.com/zavoloklom/material-design-hierarchical-display/blob/master/LICENSE (MIT License)
+ */
+.zmd-hierarchical-display {
+  visibility: hidden;
+}
+.zmd-hierarchical-display.in {
+  visibility: visible;
+}
+.zmd-hierarchical-displaying {
+  visibility: visible;
+}
+.animated {
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-animation-fill-mode: both;
+          animation-fill-mode: both;
+}
+.animated.zoomIn,
+.animated.zoomOut {
+  -webkit-animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+          animation-timing-function: cubic-bezier(0.55, 0, 0.1, 1);
+}
+@-webkit-keyframes zoomIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@keyframes zoomIn {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+@-webkit-keyframes zoomOut {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+@keyframes zoomOut {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+}
+.zoomIn {
+  -webkit-animation-name: zoomIn;
+          animation-name: zoomIn;
+}
+.zoomOut {
+  -webkit-animation-name: zoomOut;
+          animation-name: zoomOut;
+}
