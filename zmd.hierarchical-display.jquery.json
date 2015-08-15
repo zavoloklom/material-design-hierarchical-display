@@ -1,0 +1,31 @@
+{
+  "name": "zmd.hierarchical-display",
+  "title": "Material Design Hierarchical Display Animation Plugin",
+  "description": "The jQuery plugin for Material Design hierarchical display animation effect",
+  "keywords": [
+    "material",
+    "materialDesign",
+    "animation",
+    "effect",
+    "display"
+  ],
+  "version": "1.0.0",
+  "author": {
+    "name": "Sergey Kupletsky",
+    "email": "s.kupletsky@gmail.com",
+    "url": "http://github.com/zavoloklom"
+  },
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": "http://zavoloklom.github.io/material-design-hierarchical-display/blob/master/LICENSE"
+    }
+  ],
+  "bugs": "https://github.com/zavoloklom/material-design-hierarchical-display/issues",
+  "homepage": "https://zavoloklom.github.io/material-design-hierarchical-display/",
+  "docs": "https://zavoloklom.github.io/material-design-hierarchical-display/",
+  "demo": "https://zavoloklom.github.io/material-design-hierarchical-display/",
+  "dependencies": {
+    "jquery": ">=1.7 || ~2"
+  }
+}
