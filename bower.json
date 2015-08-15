@@ -1,12 +1,13 @@
 {
   "name": "material-design-hierarchical-display",
-  "description": "Material Design Hierarchical Display JQuery Plugin",
+  "description": "The jQuery plugin for Material Design hierarchical display animation effect",
   "keywords": [
     "material",
-    "design",
+    "materialDesign",
     "animation",
-    "hierarchical",
-    "display"
+    "display",
+    "jquery-plugin",
+    "ecosystem:jquery"
   ],
   "authors": [
     "Sergey Kupletsky <s.kupletsky@gmail.com> (http://github.com/zavoloklom)"
@@ -28,10 +29,10 @@
     "url": "git://github.com/zavoloklom/material-design-hierarchical-display.git"
   },
   "dependencies": {
-    "jquery": "~2.1.4"
+    "jquery": ">=1.7"
   },
   "devDependencies": {
-    "jquery": "~2.1.4",
+    "jquery": ">=1.7",
     "animate.css": "~3.4.0",
     "onScreen": "*",
     "qunit": "~1.18.0"
