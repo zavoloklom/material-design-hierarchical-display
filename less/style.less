@@ -1,3 +1,8 @@
+body {
+  padding-top: 80px;
+  background-color: @mdc-grey-200;
+}
+
 .margin-top {
   margin-top: 10px !important;
 }
@@ -5,23 +10,24 @@
   padding-top: 5px !important;
 }
 
-/* jumbotron */
-.jumbotron {
-  color: @mdc-white-dark;
-  background-color: @mdc-pink-500;
-  text-shadow: 0 2px 0 @mdc-black-lighter;
+/* ribbon */
+.ribbon {
+  background-image: url(../img/1.png);
+  background-repeat: no-repeat;
+  background-position: bottom center;
+  background-size: cover;
+  height: 340px;
+  height: 40vh;
+}
 
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  margin-bottom: 0;
-  padding: 20px 0 40px;
+/* main */
+.main {
+  margin-top: -170px;
+  margin-top: -30vh;
 }
-.jumbotron a,
-.jumbotron a:hover,
-.jumbotron a:visited {
-  color: @mdc-grey-200;
-}
-.jumbotron .btn-lg {
+
+/* main panel */
+.main-panel .btn-lg {
   margin: 10px 0;
   font-size: 24px;
   padding: 17px 30px;
@@ -29,55 +35,35 @@
   border-color: @mdc-grey-200;
   background-color: transparent;
 }
-.jumbotron .btn-lg:hover {
+.main-panel .btn-lg:hover {
   background-color: @mdc-grey-200;
   border-color: @mdc-grey-100;
   color: @mdc-pink-700;
   text-shadow: none;
 }
-.jumbotron h1, .jumbotron .h1 {
-  color: @mdc-white-darker;
+.main-panel h1, .jumbotron .h1 {
+  //color: @mdc-black-dark;
 }
-.jumbotron p {
+.main-panel p {
   margin: 8px 0;
-  font-size: 18px;
-  font-weight: 300;
-  color: @mdc-white-dark;
 }
-.jumbotron .logo {
+.main-panel .logo {
   float: left;
   padding-top: 15px;
   padding-right: 24px;
   margin: 20px 0;
 }
-.jumbotron-img {
-  background-image: url(../img/header-bg.jpg);
-  background-repeat: no-repeat;
-  background-position: bottom center;
-  background-size: cover;
-}
-@media screen and (min-width: 768px) {
-  .jumbotron h1, .jumbotron .h1 {
-    font-size: 48px;
-  }
-}
 
-.actions {
-  padding-top: 16px;
-}
 
 #social-buttons {
-  padding: 24px 0 0;
   text-align: center;
-  background-color: @mdc-grey-200;
-  border-top: 1px solid @mdc-white-dark;
-  border-bottom: 1px solid @mdc-grey-300;
+}
+#social-buttons ul {
+  margin-bottom: 0;
 }
 #social-buttons li {
-  vertical-align: top;
-}
-#social-buttons .git-tip img {
-  margin-top: -4px;
+  vertical-align: middle;
+  height: 20px;
 }
 #download-buttons {
   padding: 22px 0 17px;
@@ -92,6 +78,10 @@
   padding: 15px 0;
   margin: 0;
   border: 0;
+}
+.navbar-fixed-top {
+  position: fixed;
+  .shadow-z-2();
 }
 .navbar-default .navbar-brand {
   color: @mdc-pink-700;
