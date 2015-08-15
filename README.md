@@ -1,4 +1,4 @@
- # [Material Design Hierarchical Display 1.0.0](http://zavoloklom.github.io/material-design-hierarchical-display)
+# [Material Design Hierarchical Display 1.0.0](http://zavoloklom.github.io/material-design-hierarchical-display)
 
 [![Material Design Hierarchical Display](http://zavoloklom.github.io/material-design-hierarchical-display/img/Material-Design-Hierarchical-Display.png)](http://zavoloklom.github.io/material-design-hierarchical-display/)
 
@@ -55,7 +55,7 @@ $('.zmd-hierarchical-display').hierarchicalDisplay();
 #### Options
 
 #####**action**: `string`   
-Action that should be executed when you call the plugin.  
+Method that should be executed when you call the plugin.  
 _default_: `show`   
 
 #####**speed**: `number`   
@@ -145,8 +145,8 @@ Material Design Hierarchical Display will be maintained under the Semantic Versi
 ## Author
 - Email: s.kupletsky@gmail.com
 - Twitter: https://twitter.com/zavoloklom
-- GitHub: https://github.com/zavoloklom/
-- CodePen: http://codepen.io/zavoloklom/
+- GitHub: https://github.com/zavoloklom
+- CodePen: http://codepen.io/zavoloklom
 - Dribble: https://dribbble.com/zavoloklom
 
 ## Donate
