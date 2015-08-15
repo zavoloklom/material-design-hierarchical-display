@@ -1,0 +1,31 @@
+{
+  "name": "material-design-hierarchical-display-docs",
+  "description": "Material Design Hierarchical Display Docs",
+  "authors": [
+    "Sergey Kupletsky <s.kupletsky@gmail.com>"
+  ],
+  "license": [
+    "CC-BY-3.0"
+  ],
+  "main": [
+    "./index.html",
+    "./css/*",
+    "./js/*",
+    "./icons/*",
+    "./img/*"
+  ],
+  "ignore": [
+    "*/.*",
+    "*.json",
+    "*.md"
+  ],
+  "homepage": "http://zavoloklom.github.io/material-design-hierarchical-display/",
+  "dependencies": {
+    "material-design-iconic-font": "*",
+    "material-design-color-palette": "*",
+    "material-design-typography": "*",
+    "animate.css": "*",
+    "jquery.highlight": "*",
+    "onScreen": "*"
+  }
+}
