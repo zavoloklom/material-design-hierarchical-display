@@ -9865,16 +9865,16 @@ body {
 }
 /* ribbon */
 .ribbon {
-  background-image: url(../img/1.png);
+  background-image: url(../img/header-bg.png);
   background-repeat: no-repeat;
   background-position: bottom center;
   background-size: cover;
-  height: 340px;
+  height: 400px;
   height: 40vh;
 }
 /* main */
 .main {
-  margin-top: -170px;
+  margin-top: -300px;
   margin-top: -30vh;
 }
 /* main panel */
