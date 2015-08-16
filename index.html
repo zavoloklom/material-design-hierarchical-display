@@ -54,10 +54,10 @@
     <meta name="twitter:description" content="The jQuery plugin for Material Design Hierarchical Display animation effect.">
     <meta name="twitter:image:src" content="http://zavoloklom.github.io/material-design-hierarchical-display/img/Material-Design-Hierarchical-Display.png">
 </head>
-<body data-spy="scroll" data-target=".bs-docs-sidebar">
+<body data-spy="scroll" data-offset="80" data-target=".navbar-collapse">
 <div id="top"></div>
 
-<div id="navbar" class="navbar navbar-default navbar-fixed-top hidden-print">
+<nav id="navbar" class="navbar navbar-default navbar-fixed-top hidden-print">
     <div class="container">
         <div class="navbar-header">
             <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
@@ -69,24 +69,40 @@
 
         <div class="navbar-collapse collapse">
             <ul class="nav navbar-nav navbar-right">
-
+                <li class="hidden-sm"><a href="#getting-started">Get Started</a></li>
+                <li><a href="#demo">Demo</a></li>
+                <!--<li class="dropdown-split-left"><a href="#documentation">Documentation</a></li>
+                <li class="dropdown dropdown-split-right hidden-xs">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="zmdi zmdi-caret-down"></i>
+                    </a>
+                    <ul class="dropdown-menu pull-right">
+                        <li><a href="#documentation">Documentation</a></li>
+                        <li class="divider"></li>
+                        <li><a href="#stylesheet">Stylesheet</a></li>
+                        <li><a href="#options">Options</a></li>
+                        <li><a href="#methods">Methods</a></li>
+                        <li><a href="#events">Events</a></li>
+                    </ul>
+                </li>
+                <li><a href="#about">About</a></li> -->
             </ul>
         </div>
     </div>
-</div>
+</nav>
 
 <div class="ribbon"></div>
 
 <main class="main container">
-    <div class="panel main-panel">
+    <article class="panel main-panel">
         <div class="panel-heading">
             <img class="logo" src="icons/favicon-96x96.png">
             <h1>Material Design Hierarchical Display</h1>
             <p class="lead">The jQuery plugin for hierarchical display animation effect</p>
         </div>
-    </div>
+    </article>
 
-    <div id="social-buttons" class="panel panel-default hidden-xs">
+    <article id="social-buttons" class="panel panel-default hidden-xs">
         <div class="panel-body">
             <ul class="list-inline">
                 <li>
@@ -106,9 +122,9 @@
                 </li>
             </ul>
         </div>
-    </div>
+    </article>
 
-    <div id="getting-started" class="panel panel-mc-pink">
+    <article id="getting-started" class="panel panel-mc-pink">
         <div class="panel-heading">
             <div class="panel-title mdt-title">Getting Started</div>
         </div>
@@ -133,9 +149,9 @@
                 </li>
             </ol>
         </div>
-    </div>
+    </article>
 
-    <div id="demo" class="panel panel-mc-pink">
+    <article id="demo" class="panel panel-mc-pink">
         <div class="panel-heading">
             <div class="panel-title mdt-title">Demo</div>
         </div>
@@ -179,31 +195,51 @@
             </ul>
             <p class="mdt-subhead-2 text-center"><a id="demo-animation-toggle-link" data-toggle="hierarchical-display" href="#demo-animation">Toggle animation</a></p>
         </div>
-    </div>
-
-
+    </article>
 </main>
-
-
 
 </body>
 
 <script src="js/jquery.min.js"></script>
+<script src="//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src='js/jquery.onscreen.min.js'></script>
+<!-- <script src='js/jquery.nav.js'></script> -->
 <script src='js/jquery.zmd.hierarchical-display.js'></script>
 <script src="js/jquery.highlight.js"></script>
 <script>
-    $(document).ready(function(){
-        $('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});
-    });
-    $('.panel').onScreen({
-        doIn: function() {
-            $(this).addClass('fadeInUp animated')
-        },
-        tolerance: 0,
-        throttle: 50,
-        toggleClass: ''
-    });
+    (function($) {
+        $(document).ready(function(){
+            $('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});
+        });
+        $('.panel').onScreen({
+            doIn: function() {
+                $(this).addClass('fadeInUp animated')
+            },
+            tolerance: 0,
+            throttle: 50,
+            toggleClass: ''
+        });
+
+        $("body")
+            // Add slidedown animation to dropdown
+                .on('show.bs.dropdown', '.dropdown', function(e) {
+                    $(this).find('.dropdown-menu').first().stop(true, true).slideDown();
+                })
+            // Add slideup animation to dropdown
+                .on('hide.bs.dropdown', '.dropdown', function(e) {
+                    $(this).find('.dropdown-menu').first().stop(true, true).slideUp();
+                });
+
+        // onePageNav
+        //$('#nav').onePageNav({
+        //    currentClass: 'active',
+        //    changeHash: false,
+        //    scrollSpeed: 750,
+        //    scrollThreshold: 0.5,
+        //    filter: '',
+        //    easing: 'swing'
+        //});
+    })(jQuery);
 </script>
 
 <!-- Google Adsense -->
