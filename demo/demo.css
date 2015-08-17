@@ -1,16 +1,37 @@
-/* demo style */
+@import url(http://fonts.googleapis.com/css?family=Roboto:400,300,300italic,400italic,500,500italic);
+
+body {
+    font-family: Roboto, 'Noto Sans', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    letter-spacing: .1px;
+    color: rgba(0, 0, 0, 0.87);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    text-rendering: optimizeLegibility;
+}
+h1 {
+    font-size: 34px;
+    line-height: 40px;
+    font-weight: 400;
+    letter-spacing: 0;
+    color: rgba(0, 0, 0, 0.54);
+}
+
+/* demo container style */
 #demo {
     position: relative;
     margin: 30px auto;
-    max-width: 455px;
+    width: 620px;
     padding: 0;
 }
 
 #demo > * {
     display: inline-block;
-    width: 100px;
-    height: 100px;
-    margin: 5px;
+    width: 35px;
+    height: 35px;
+    margin: 0;
     cursor: pointer;
     overflow: hidden;
     position: relative;
@@ -19,5 +40,8 @@
     -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
     -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
     box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
-    background-color: #03a9f4;
+    background-color: #e91e63;
+    background-position: 50% 50%;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
