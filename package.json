@@ -10,7 +10,7 @@
     "jquery-plugin",
     "ecosystem:jquery"
   ],
-  "version": "1.0.0",
+  "version": "1.0.1",
   "author": "Sergey Kupletsky <s.kupletsky@gmail.com> (http://github.com/zavoloklom)",
   "license": "MIT",
   "main": [
