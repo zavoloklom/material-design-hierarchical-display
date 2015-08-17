@@ -1,8 +1,19 @@
 # [Material Design Hierarchical Display 1.0.1](http://zavoloklom.github.io/material-design-hierarchical-display)
 
+[![Latest Version](https://img.shields.io/github/release/zavoloklom/material-design-hierarchical-display.svg?style=flat-square&label=latest version)](https://github.com/zavoloklom/material-design-hierarchical-display/tags)
+[![Software License](https://img.shields.io/badge/license-MIT License-blue.svg?style=flat-square)](LICENSE)
+[![Total Downloads](https://img.shields.io/github/downloads/zavoloklom/material-design-hierarchical-display/latest/total.svg)](https://github.com/zavoloklom/material-design-hierarchical-display/tags)
+
+[![NPM](https://img.shields.io/npm/v/material-design-hierarchical-display.svg?style=flat-square)](https://www.npmjs.com/package/material-design-hierarchical-display)
+[![Dependency](https://img.shields.io/david/zavoloklom/material-design-hierarchical-display.svg?style=flat-square)](https://david-dm.org/zavoloklom/material-design-hierarchical-display)
+[![DevDependency](https://img.shields.io/david/dev/zavoloklom/material-design-hierarchical-display.svg?style=flat-square)](https://david-dm.org/zavoloklom/material-design-hierarchical-display#info=devDependencies)
+[![Last Month Downloads](https://img.shields.io/npm/dm/material-design-hierarchical-display.svg?style=flat-square)](https://www.npmjs.com/package/material-design-hierarchical-display)
+
 [![Material Design Hierarchical Display](http://zavoloklom.github.io/material-design-hierarchical-display/img/Material-Design-Hierarchical-Display.png)](http://zavoloklom.github.io/material-design-hierarchical-display/)
 
 #### The jQuery plugin for Material Design hierarchical display animation effect
+
+[Hierarchical Timing](http://www.google.com/design/spec/animation/meaningful-transitions.html?safe=active#meaningful-transitions-hierarchical-timing) is a meaningful transition introduced in Google Material Design that focuses your users attention in an app or how an app element got from point A to point B.
 
 ## Install
 **Download:**    [1.0.1 (ZIP)](https://github.com/zavoloklom/material-design-hierarchical-display/releases/download/1.0.1/material-design-hierarchical-display.zip)   
@@ -15,14 +26,50 @@
 ```html
 <!-- Compiled and minified CSS -->
 <link rel="stylesheet" href="zmd.hierarchical-display.min.css">
-
 <!-- You need to include jquery.zmd.hierarchical-display.js after jQuery. Requires jQuery 1.7+. -->
 <script src="jquery.js"></script>
 <!-- Compiled and minified JavaScript -->
 <script src="jquery.zmd.hierarchical-display.min.js"></script>
 ```
 
-#### Stylesheet
+#### Add elements that you want to display
+```html
+<!-- It is parent element -->
+<div data-animation="hierarchical-display">
+  <!-- All children (regardless of the tag name) in parent element would be animated, after plugin starts -->
+  <div></div>
+  <div></div>
+  <div></div>
+</div>
+```
+
+#### Activate via data attribute on page loaded
+
+You can add `data-animation="hierarchical-display"` to parent element and on event `document.ready` animation started.
+
+#### Activate via data attributes on element that should toggle animation
+
+Also you can add `data-toggle="hierarchical-display"` and a `data-target` to the element to automatically assign control of a hierarchical displaying element. The `data-target` attribute accepts a CSS selector to apply the display to. 
+
+```html
+<!-- It is parent element -->
+<div id="parent" data-animation="hierarchical-display">
+  <!-- All children (regardless of the tag name) in parent element would be animated, after plugin starts -->
+</div>
+<!-- This element will toggle animation -->
+<a href="#" data-toggle="hierarchical-display" data-target="#parent">Toggle animation</a>
+```
+
+#### Activate via JavaScript
+
+Enable manually with:
+```JavaScript
+$('.zmd-hierarchical-display').hierarchicalDisplay();
+```
+
+## Documentation
+
+### Stylesheet
 
 The MD Hierarchical Display plugin utilizes a few classes to handle the heavy lifting:
 
@@ -38,45 +85,33 @@ If you'd like it to default close, add class `zmd-hierarchical-display`, for def
 Also it require CSS animation from `animation.less`. But you can easily change it to your favorite animation library - for example [animate.css](https://github.com/daneden/animate.css).    
 [Demo with animate.css on CodePen]()
 
-#### Via data attributes
-
-You can add `data-animation="hierarchical-display"` to parent element and on event `document.ready` animation started.
-
-Also you can add `data-toggle="hierarchical-display"` and a `data-target` to the element to automatically assign control of a hierarchical displaying element. The `data-target` attribute accepts a CSS selector to apply the display to. 
+### Options
 
 All options of the plugin can be set via the corresponding data attributes, for example: `data-speed` for `speed` option or `data-animation-in` for `animationIn` option.
 
-#### Via JavaScript
-
-```JavaScript
-$('.zmd-hierarchical-display').hierarchicalDisplay();
-```
-
-#### Options
-
-#####**action**: `string`   
+####**action**: `string`   
 Method that should be executed when you call the plugin.  
 _default_: `show`   
 
-#####**speed**: `number`   
+####**speed**: `number`   
 Plugin speed. You can use decimal values, for example: `0.1`.  
 _default_: `5`   
 
-#####**animationIn**: `string`   
+####**animationIn**: `string`   
 Animation CSS class that should be added to displaying element when element is showing.
 _default_: `zoomIn`   
 
-#####**animationOut**: `string`   
+####**animationOut**: `string`   
 Animation CSS class that should be added to displaying element when element is hiding.  
 _default_: `zoomOut`   
 
-#####**debug**: `boolean`   
+####**debug**: `boolean`   
 Spams your console with information about the events.   
 _default_: `false`   
 
-#### Methods
+### Methods
 
-#####**.hierarchicalDisplay(options)**:   
+####**.hierarchicalDisplay(options)**:   
 Initializes the plugin with an optional options object and starts working.   
 
 ```JavaScript
@@ -85,29 +120,29 @@ $('.zmd-hierarchical-display').hierarchicalDisplay({
 })
 ``` 
 
-#####**.hierarchicalDisplay('show')**:   
+####**.hierarchicalDisplay('show')**:   
 Shows a displaying element.
 
-#####**.hierarchicalDisplay('hide')**:   
+####**.hierarchicalDisplay('hide')**:   
 Hides a displaying element.   
 
 #####**.hierarchicalDisplay('toggle')**:   
 Toggles a displaying element to shown or hidden.  
 
-#### Events
+### Events
 
 Bootstrap's collapse class exposes a few events for hooking into collapse functionality.   
 
-#####**show.zmd.hierarchicalDisplay**:   
+####**show.zmd.hierarchicalDisplay**:   
 This event fires immediately when the `show` instance method is called. 
 
-#####**shown.zmd.hierarchicalDisplay**:   
+####**shown.zmd.hierarchicalDisplay**:   
 This event is fired when a displaying element has been made visible to the user (will wait for CSS animations to complete).
 
-#####**hide.zmd.hierarchicalDisplay**:   
+####**hide.zmd.hierarchicalDisplay**:   
 This event fires immediately when the `hide` instance method is called. 
 
-#####**hidden.zmd.hierarchicalDisplay**:   
+####**hidden.zmd.hierarchicalDisplay**:   
 This event is fired when a displaying element has been hidden from the user (will wait for CSS animations to complete).
 
 ```JavaScript
@@ -116,7 +151,7 @@ $('#myDisplayingElement').on('shown.zmd.hierarchicalDisplay', function () {
 })
 ``` 
 
-#### Version number
+## Version number
 
 The version of plugin can be accessed via the VERSION property of the plugin's constructor:
 
