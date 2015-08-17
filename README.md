@@ -189,4 +189,4 @@ Material Design Hierarchical Display will be maintained under the Semantic Versi
 - Dribble: https://dribbble.com/zavoloklom
 
 ## Donate
-- You can support me via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=s%2ekupletsky%40gmail%2ecom&lc=US&item_name=Material%20Design%20Iconic%20Font&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted), [WebMoney](https://funding.webmoney.ru/material-design-hierarchical-display/donate) or [Gratipay](http://gratipay.com/zavoloklom/)
+- You can support me via [PayPal](https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=s%2ekupletsky%40gmail%2ecom&lc=US&item_name=Material%20Design%20Hierarchical%20Display&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted), [WebMoney](https://funding.webmoney.ru/material-design-hierarchical-display/donate) or [Gratipay](http://gratipay.com/zavoloklom/)
