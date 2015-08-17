@@ -1,11 +1,11 @@
-# [Material Design Hierarchical Display 1.0.0](http://zavoloklom.github.io/material-design-hierarchical-display)
+# [Material Design Hierarchical Display 1.0.1](http://zavoloklom.github.io/material-design-hierarchical-display)
 
 [![Material Design Hierarchical Display](http://zavoloklom.github.io/material-design-hierarchical-display/img/Material-Design-Hierarchical-Display.png)](http://zavoloklom.github.io/material-design-hierarchical-display/)
 
 #### The jQuery plugin for Material Design hierarchical display animation effect
 
 ## Install
-**Download:**    [1.0.0 (ZIP)](https://github.com/zavoloklom/material-design-hierarchical-display/releases/download/1.0.0/material-design-hierarchical-display.zip)   
+**Download:**    [1.0.1 (ZIP)](https://github.com/zavoloklom/material-design-hierarchical-display/releases/download/1.0.1/material-design-hierarchical-display.zip)   
 **Bower:**       `bower install material-design-hierarchical-display`   
 **NPM:**         `npm install material-design-hierarchical-display`
 
@@ -121,7 +121,7 @@ $('#myDisplayingElement').on('shown.zmd.hierarchicalDisplay', function () {
 The version of plugin can be accessed via the VERSION property of the plugin's constructor:
 
 ```JavaScript
-$.fn.hierarchicalDisplay.Constructor.VERSION // => "1.0.0"
+$.fn.hierarchicalDisplay.Constructor.VERSION // => "1.0.1"
 ``` 
 
 ## Licence
@@ -137,6 +137,10 @@ The MIT License (MIT). Please see [License File](LICENSE) for more information.
 - Not supported in Opera Mini   
 
 Browser support specified in accordance to [caniuse.com](http://caniuse.com/) portal (you can check [CSS3 2D Transforms](http://caniuse.com/#feat=transforms2d) and [animation](http://caniuse.com/#feat=css-animation)).
+
+## Changelog
+v1.0.1:   
+- make some internal optimizations   
 
 ## Versioning
 Material Design Hierarchical Display will be maintained under the Semantic Versioning guidelines as much as possible. Releases will be numbered with the following format:   

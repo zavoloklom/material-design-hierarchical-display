@@ -1,5 +1,5 @@
 /* ========================================================================
- * Zavoloklom Material Design: jquery.zmd.hierarchical-display.js v1.0.0
+ * Zavoloklom Material Design: jquery.zmd.hierarchical-display.js
  * http://zavoloklom.github.io/material-design-hierarchical-display/
  * ========================================================================
  * Copyright 2014 Zavoloklom.
@@ -21,7 +21,7 @@
         if (this.options.debug === true) this._debug();
     };
 
-    HDisplay.VERSION = '1.0.0';
+    HDisplay.VERSION = '1.0.1';
 
     HDisplay.TRANSITION_DURATION = 300;
 
