@@ -18,6 +18,7 @@
         this._time = HDisplay.TRANSITION_DURATION * this.options.speed;
 
         this.init();
+        if (this.options.debug === true) this._debug();
     };
 
     HDisplay.VERSION = '1.0.0';
@@ -55,15 +56,12 @@
         var parentElement = this.$element;
         var children = this.$children;
         var options = this.options;
-        var debug = this.options.debug;
-        var debugElement = parentElement.context.tagName + '#' + parentElement.context.id;
 
         if (parentElement.hasClass('in') || parentElement.hasClass('zmd-hierarchical-displaying')) return;
 
         this._removeAnimations();
 
         parentElement.trigger($.Event('show.zmd.hierarchicalDisplay'));
-        if (debug === true) {console.log('Event "show.zmd.hierarchicalDisplay" for ' + debugElement);}
 
         this._addAnimation(options.animationIn);
 
@@ -72,7 +70,6 @@
                 .addClass('in')
                 .removeClass('zmd-hierarchical-displaying')
                 .trigger($.Event('shown.zmd.hierarchicalDisplay'));
-            if (debug === true) {console.log('Event "shown.zmd.hierarchicalDisplay" for ' + debugElement);}
         };
 
         // Call complete function after animation ends
@@ -85,15 +82,12 @@
         var parentElement = this.$element;
         var children = this.$children;
         var options = this.options;
-        var debug = this.options.debug;
-        var debugElement = parentElement.context.tagName + '#' + parentElement.context.id;
 
         if (parentElement.css('visibility') === 'hidden' || parentElement.hasClass('zmd-hierarchical-displaying')) return;
 
         this._removeAnimations();
 
         parentElement.trigger($.Event('hide.zmd.hierarchicalDisplay'));
-        if (debug === true) {console.log('Event "hide.zmd.hierarchicalDisplay" for ' + debugElement);}
 
         this._addAnimation(options.animationOut);
 
@@ -102,7 +96,6 @@
                 .removeClass('zmd-hierarchical-displaying')
                 .removeClass('in')
                 .trigger($.Event('hidden.zmd.hierarchicalDisplay'));
-            if (debug === true) {console.log('Event "hidden.zmd.hierarchicalDisplay" for ' + debugElement);}
         };
 
         // Call complete function after animation ends
@@ -132,6 +125,27 @@
                 .addClass(animation)
                 .addClass('animated');
         });
+    };
+
+    HDisplay.prototype._debug = function () {
+        $(document)
+            .on('show.zmd.hierarchicalDisplay', function (e) {
+                console.log('Event "show.zmd.hierarchicalDisplay". For more information see:');
+                console.log(e);
+            })
+            .on('shown.zmd.hierarchicalDisplay', function (e) {
+                console.log('Event "shown.zmd.hierarchicalDisplay". For more information see:');
+                console.log(e);
+            })
+            .on('hide.zmd.hierarchicalDisplay', function (e) {
+                console.log('Event "hide.zmd.hierarchicalDisplay". For more information see:');
+                console.log(e);
+            })
+            .on('hidden.zmd.hierarchicalDisplay', function (e) {
+                console.log('Event "hidden.zmd.hierarchicalDisplay". For more information see:');
+                console.log(e);
+            });
+
     };
 
     // PLUGIN DEFINITION
