@@ -83,7 +83,7 @@ You don't need to add the class `zmd-hierarchical-display` to the displaying ele
 If you'd like it to default close, add class `zmd-hierarchical-display`, for default open, add the additional class `in`.
 
 Also it require CSS animation from `animation.less`. But you can easily change it to your favorite animation library - for example [animate.css](https://github.com/daneden/animate.css).    
-[Demo with animate.css on CodePen]()
+[Demo with animate.css on CodePen](http://codepen.io/zavoloklom/details/eNaEBM/)
 
 ### Options
 
@@ -147,7 +147,7 @@ This event is fired when a displaying element has been hidden from the user (wil
 
 ```JavaScript
 $('#myDisplayingElement').on('shown.zmd.hierarchicalDisplay', function () {
-  // do something…
+  // do somethingâ€¦
 })
 ``` 
 
