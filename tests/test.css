@@ -1,12 +1,12 @@
 /* test style */
-#test, #test2 {
+#test {
     position: relative;
     margin: 30px auto;
-    width: 455px;
+    max-width: 455px;
     padding: 0;
 }
 
-#test > *, #test2 > * {
+#test > * {
     display: inline-block;
     width: 100px;
     height: 100px;
