@@ -124,16 +124,17 @@
     module("Data-API Tests");
 
     QUnit.test("Data-API: action, speed, animation", function(assert) {
-        assert.expect(3);
-        var done = assert.async();
+        var el = $("#test").addClass('in');
 
-        var el = $("#test");
+        el.on('hide.zmd.hierarchicalDisplay', function() {
+            assert.ok(true, "Init method from DATA");
+        });
 
         // add data-attr
         el.attr('data-action', 'hide');
         el.attr('data-speed', '50');
         el.attr('data-animation-out', 'fadeOut');
-        el.addClass('in').hierarchicalDisplay();
+        el.hierarchicalDisplay();
 
         var childrenDelay, animationClass = 1;
         el.children().each(function () {
@@ -142,11 +143,6 @@
         });
         assert.equal(parseFloat(childrenDelay).toFixed(2), 0.04, "Children has new speed");
         assert.equal(animationClass, 1, "Children has new class");
-
-        el.on('hidden.zmd.hierarchicalDisplay', function() {
-            assert.ok(true, "Init method from DATA");
-            done();
-        });
     });
 
     // JS Options tests
