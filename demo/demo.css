@@ -1,0 +1,23 @@
+/* demo style */
+#demo {
+    position: relative;
+    margin: 30px auto;
+    max-width: 455px;
+    padding: 0;
+}
+
+#demo > * {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+    margin: 5px;
+    cursor: pointer;
+    overflow: hidden;
+    position: relative;
+    border: none;
+    border-radius: 2px;
+    -webkit-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    -moz-box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 1px 2px 0 rgba(0, 0, 0, 0.24);
+    background-color: #03a9f4;
+}
