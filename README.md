@@ -43,13 +43,20 @@
 </div>
 ```
 
-#### Activate via data attribute on page loaded
+#### Via data attribute
 
-You can add `data-animation="hierarchical-display"` to parent element and on event `document.ready` animation started.
+Add `data-animation="hierarchical-display"` to parent element that contains children elements which you want to display - for display elements on page loads (on event `document.ready`). 
 
-#### Activate via data attributes on element that should toggle animation
+#### Via JavaScript
 
-Also you can add `data-toggle="hierarchical-display"` and a `data-target` to the element to automatically assign control of a hierarchical displaying element. The `data-target` attribute accepts a CSS selector to apply the display to. 
+Also you can activate plugin manually from JavaScript:
+```JavaScript
+$('.zmd-hierarchical-display').hierarchicalDisplay();
+```
+
+#### Toggle animation
+
+If you want to toggle your animation you should add `data-toggle="hierarchical-display"` and a `data-target` to the control element to automatically assign control of a hierarchical displaying element. The `data-target` attribute accepts a CSS selector to apply the display to. 
 
 ```html
 <!-- It is parent element -->
@@ -60,12 +67,7 @@ Also you can add `data-toggle="hierarchical-display"` and a `data-target` to the
 <a href="#" data-toggle="hierarchical-display" data-target="#parent">Toggle animation</a>
 ```
 
-#### Activate via JavaScript
 
-Enable manually with:
-```JavaScript
-$('.zmd-hierarchical-display').hierarchicalDisplay();
-```
 
 ## Documentation
 
