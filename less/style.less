@@ -3,6 +3,15 @@ body {
   background-color: @mdc-grey-200;
 }
 
+[data-animation="animate"] {
+  //opacity: 0;
+  transition: opacity 0.2s ease-in-out;
+
+  &.animated{
+    //opacity: 1;
+  }
+}
+
 .margin-top {
   margin-top: 10px !important;
 }
@@ -18,6 +27,10 @@ body {
   background-size: cover;
   height: 400px;
   height: 40vh;
+
+  //position: fixed;
+  //width: 100%;
+  //z-index: 0;
 }
 
 /* main */
@@ -31,14 +44,15 @@ body {
   margin: 10px 0;
   font-size: 24px;
   padding: 17px 30px;
-  color: @mdc-white-dark;
+  background-color: @mdc-pink-700;
+  color: @mdc-white-darker;
   border-color: @mdc-grey-200;
-  background-color: transparent;
+  transition: all 0.15s ease-in-out;
 }
 .main-panel .btn-lg:hover {
   background-color: @mdc-grey-200;
-  border-color: @mdc-grey-100;
   color: @mdc-pink-700;
+  border-color: @mdc-grey-100;
   text-shadow: none;
 }
 .main-panel h1, .jumbotron .h1 {

@@ -9857,6 +9857,10 @@ body {
   padding-top: 80px;
   background-color: #eeeeee;
 }
+[data-animation="animate"] {
+  -webkit-transition: opacity 0.2s ease-in-out;
+          transition: opacity 0.2s ease-in-out;
+}
 .margin-top {
   margin-top: 10px !important;
 }
@@ -9882,14 +9886,16 @@ body {
   margin: 10px 0;
   font-size: 24px;
   padding: 17px 30px;
-  color: rgba(255, 255, 255, 0.7);
+  background-color: #c2185b;
+  color: #ffffff;
   border-color: #eeeeee;
-  background-color: transparent;
+  -webkit-transition: all 0.15s ease-in-out;
+          transition: all 0.15s ease-in-out;
 }
 .main-panel .btn-lg:hover {
   background-color: #eeeeee;
-  border-color: #f5f5f5;
   color: #c2185b;
+  border-color: #f5f5f5;
   text-shadow: none;
 }
 .main-panel p {
