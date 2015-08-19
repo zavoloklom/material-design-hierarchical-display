@@ -20,6 +20,10 @@
 **Bower:**       `bower install material-design-hierarchical-display`   
 **NPM:**         `npm install material-design-hierarchical-display`
 
+## Demo
+[Demo site](http://zavoloklom.github.io/material-design-hierarchical-display/).   
+All demo site files you can find [here](https://github.com/zavoloklom/material-design-hierarchical-display/tree/gh-pages).
+
 ## Usage
 
 #### Add CSS and JS files to your page:
@@ -67,8 +71,6 @@ If you want to toggle your animation you should add `data-toggle="hierarchical-d
 <a href="#" data-toggle="hierarchical-display" data-target="#parent">Toggle animation</a>
 ```
 
-
-
 ## Documentation
 
 ### Stylesheet
@@ -100,7 +102,7 @@ Plugin speed. You can use decimal values, for example: `0.1`.
 _default_: `5`   
 
 ####**animationIn**: `string`   
-Animation CSS class that should be added to displaying element when element is showing.
+Animation CSS class that should be added to displaying element when element is showing.   
 _default_: `zoomIn`   
 
 ####**animationOut**: `string`   
