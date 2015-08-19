@@ -69,7 +69,10 @@ body {
 }
 /* main */
 .main {
-  margin-top: -220px;
+  margin-top: 8px;
+  @media (min-width: 768px) {
+    margin-top: -220px;
+  }
 }
 
 /* main panel */
@@ -164,6 +167,9 @@ body {
   .navbar-nav>li>a {
     border-radius: 2px;
   }
+}
+.navbar-brand {
+  margin-left: 16px;
 }
 
 /* dropdown */

@@ -89,6 +89,11 @@
 .panel-heading + .panel-body {
   padding-top: 0;
 }
+@media (max-width: 767px) {
+  .panel + .panel {
+    margin: 0;
+  }
+}
 .panel-title {
   margin-top: 0;
   margin-bottom: 0;
@@ -9913,7 +9918,12 @@ body {
 }
 /* main */
 .main {
-  margin-top: -220px;
+  margin-top: 8px;
+}
+@media (min-width: 768px) {
+  .main {
+    margin-top: -220px;
+  }
 }
 /* main panel */
 .main-panel .btn-lg {
@@ -10004,6 +10014,9 @@ body {
   .navbar-nav > li > a {
     border-radius: 2px;
   }
+}
+.navbar-brand {
+  margin-left: 16px;
 }
 /* dropdown */
 .dropdown {

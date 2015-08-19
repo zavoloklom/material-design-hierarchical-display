@@ -33,6 +33,12 @@
   padding-top: 0;
 }
 
+@media (max-width: @screen-xs-max) {
+  .panel+.panel {
+    margin: 0;
+  }
+}
+
 // Within heading, strip any `h*` tag of its default margins for spacing.
 .panel-title {
   margin-top: 0;
