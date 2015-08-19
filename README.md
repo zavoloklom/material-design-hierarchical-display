@@ -130,7 +130,7 @@ Shows a displaying element.
 ####**.hierarchicalDisplay('hide')**:   
 Hides a displaying element.   
 
-#####**.hierarchicalDisplay('toggle')**:   
+####**.hierarchicalDisplay('toggle')**:   
 Toggles a displaying element to shown or hidden.  
 
 ### Events
