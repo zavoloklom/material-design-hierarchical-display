@@ -49,5 +49,15 @@ module.exports = {
             src: 'bower_components/onScreen/jquery.onscreen.min.js',
             dest: 'js/'
         }]
+    },
+    scroll: {
+        files: [{
+            expand: true,
+            dot: true,
+            filter: 'isFile',
+            flatten: true,
+            src: 'bower_components/jquery-smooth-scroll/jquery.smooth-scroll.min.js',
+            dest: 'js/'
+        }]
     }
 };
