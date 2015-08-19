@@ -135,7 +135,7 @@ Toggles a displaying element to shown or hidden.
 
 ### Events
 
-Bootstrap's collapse class exposes a few events for hooking into collapse functionality.   
+Material Design Hierarchical Display plugin exposes a few events for hooking into displaying functionality.   
 
 ####**show.zmd.hierarchicalDisplay**:   
 This event fires immediately when the `show` instance method is called. 
