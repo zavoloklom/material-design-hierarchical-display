@@ -8,8 +8,14 @@
   margin-bottom: @line-height-computed/2;
   background-color: @panel-bg;
   border: none;
-  border-radius: @panel-border-radius;
+  border-radius: 0;
   .shadow-z-1();
+}
+
+@media (min-width: @screen-xs-min) {
+  .panel {
+    border-radius: @panel-border-radius;
+  }
 }
 
 // Panel contents
@@ -31,12 +37,6 @@
 
 .panel-heading+.panel-body {
   padding-top: 0;
-}
-
-@media (max-width: @screen-xs-max) {
-  .panel+.panel {
-    margin: 0;
-  }
 }
 
 // Within heading, strip any `h*` tag of its default margins for spacing.
