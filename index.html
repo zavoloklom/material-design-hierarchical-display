@@ -177,7 +177,7 @@
                                 <!-- All children (regardless of the tag name) in parent element would be animated, after plugin starts -->
                             </div></pre>
                     </div>
-                    <p class="alert alert-success"><i class="zmdi zmdi-alert-circle"></i> Also you can activate plugin manually from JavaScript: <code>$(yourParentElement).hierarchicalDisplay();</code></p>
+                    <p class="alert alert-success"><i class="zmdi zmdi-alert-circle"></i> Also you can activate plugin manually from JavaScript: <code>$(elem).hierarchicalDisplay();</code></p>
                 </li>
             </ol>
         </div>
@@ -188,7 +188,7 @@
             <div class="panel-heading">
                 <div class="panel-title mdt-title">Simple Demo</div>
             </div>
-            <div class="panel-body">
+            <div class="panel-body" style="overflow: hidden">
                 <ul id="demo-animation" >
                     <li></li>
                     <li></li>
@@ -229,6 +229,15 @@
                 <p class="mdt-subhead-2 text-center"><a id="demo-animation-toggle-link" data-toggle="hierarchical-display" href="#demo-animation">Toggle animation</a></p>
             </div>
         </section>
+
+        <!-- Full Big -->
+        <section data-animation="animate" class="visible-lg text-center" style="padding: 8px">
+            <ins class="panel adsbygoogle"
+                 style="display:inline-block;width:728px;height:90px"
+                 data-ad-client="ca-pub-1677266632116401"
+                 data-ad-slot="3402533376"></ins>
+        </section>
+
         <section data-animation="animate" class="panel panel-mc-pink">
             <div class="panel-heading">
                 <div class="panel-title mdt-title">Demo With Animate.css</div>
@@ -238,20 +247,13 @@
                 </div>
             </div>
         </section>
-
-        <!-- Full Big -->
-        <section data-animation="animate" class="visible-lg text-center" style="padding: 8px">
-            <ins class="panel adsbygoogle"
-                 style="display:inline-block;width:728px;height:90px"
-                 data-ad-client="ca-pub-1677266632116401"
-                 data-ad-slot="3402533376"></ins>
-        </section>
     </article>
 
     <article id="documentation">
+        <p class="panel-tagline">Documentation</p>
         <section id="stylesheet" data-animation="animate" class="panel panel-mc-pink">
             <div class="panel-heading">
-                <div class="panel-title mdt-title">Documentation: Stylesheet</div>
+                <div class="panel-title mdt-title">Stylesheet</div>
                 </div>
             <div class="panel-body">
                 <p>The MD Hierarchical Display plugin utilizes a few classes to handle the heavy lifting:</p>
@@ -265,9 +267,10 @@
                 <p>Also it require CSS animation from <code>animation.less</code>. But you can easily change it to your favorite animation library - for example <a href="https://github.com/daneden/animate.css" target="_blank">animate.css</a>. <br> See demo with animate.css <a href="http://codepen.io/zavoloklom/details/eNaEBM/" target="_blank" title="Demo with animate.css">on CodePen</a> or on this page in demo section.</p>
             </div>
         </section>
+        <p class="panel-tagline">Documentation</p>
         <section id="options" data-animation="animate" class="panel panel-mc-pink">
             <div class="panel-heading">
-                <div class="panel-title mdt-title">Documentation: Options</div>
+                <div class="panel-title mdt-title">Options</div>
             </div>
             <div class="panel-body">
                 <p>All options of the plugin can be set via the corresponding data attributes, for example: <code>data-speed</code> for <code>speed</code> option or <code>data-animation-in</code> for <code>animationIn</code> option.</p>
@@ -288,9 +291,10 @@
                     <em>default</em>: <code>false</code></p>
             </div>
         </section>
+        <p class="panel-tagline">Documentation</p>
         <section id="methods" data-animation="animate" class="panel panel-mc-pink">
             <div class="panel-heading">
-                <div class="panel-title mdt-title">Documentation: Methods</div>
+                <div class="panel-title mdt-title">Methods</div>
             </div>
             <div class="panel-body">
                 Public methods that provides by plugin.
@@ -309,9 +313,10 @@
                 <p>Toggles a displaying element to shown or hidden.</p>
             </div>
         </section>
+        <p class="panel-tagline">Documentation</p>
         <section id="events" data-animation="animate" class="panel panel-mc-pink">
             <div class="panel-heading">
-                <div class="panel-title mdt-title">Documentation: Events</div>
+                <div class="panel-title mdt-title">Events</div>
             </div>
             <div class="panel-body">
                 <p>Material Design Hierarchical Display plugin exposes a few events for hooking into displaying functionality.</p>
