@@ -60,7 +60,7 @@
     <meta property="og:description"   content="The jQuery plugin for Material Design Hierarchical Display animation effect." />
     <meta property="og:image"         content="http://zavoloklom.github.io/material-design-hierarchical-display/img/Material-Design-Hierarchical-Display.png" />
 </head>
-<body data-spy="scroll" data-offset="100" data-target=".navbar-collapse">
+<body data-spy="scroll" data-offset="90" data-target=".navbar-collapse">
 <div id="fb-root"></div>
 <nav id="navbar" class="navbar navbar-default navbar-fixed-top hidden-print">
     <div class="container">
@@ -69,20 +69,20 @@
                 <span class="sr-only">Toggle navigation</span>
                 <i class="zmdi zmdi-menu"></i>
             </button>
-            <a class="navbar-brand" href="index.html"><strong class="visible-xs-inline">MD</strong><strong class="hidden-xs">Material Design</strong> Hierarchical Display</a>
+            <a class="navbar-brand" href="index.html"><strong class="hidden-lg">MD</strong><strong class="visible-lg-inline">Material Design</strong> Hierarchical Display</a>
         </div>
 
         <div class="navbar-collapse collapse">
             <ul id="nav" class="nav navbar-nav navbar-right">
-                <li class="hidden-sm"><a href="#getting-started">Getting Started</a></li>
+                <li><a href="#getting-started">Getting Started</a></li>
                 <li><a href="#demo">Demo</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                         Documentation <i class="zmdi zmdi-caret-down"></i>
                     </a>
                     <ul class="dropdown-menu">
-                        <li class="hidden-xs"><a href="#documentation">Documentation</a></li>
-                        <li class="divider hidden-xs"></li>
+                        <li class="hidden-xs hidden-sm"><a href="#documentation">Documentation</a></li>
+                        <li class="divider hidden-xs hidden-sm"></li>
                         <li><a href="#stylesheet">Stylesheet</a></li>
                         <li><a href="#options">Options</a></li>
                         <li><a href="#methods">Methods</a></li>
@@ -100,7 +100,7 @@
 <main class="main container">
     <article class="panel main-panel">
         <div class="panel-heading">
-            <img class="logo hidden-xs" src="icons/favicon-96x96.png">
+            <img class="logo visible-lg" src="icons/favicon-96x96.png">
             <h1>Material Design Hierarchical Display</h1>
             <p class="lead">The jQuery plugin for hierarchical display animation effect</p>
         </div>
@@ -250,7 +250,7 @@
     </article>
 
     <article id="documentation">
-        <p class="panel-tagline">Documentation</p>
+        <p class="list-subheader">Documentation</p>
         <section id="stylesheet" data-animation="animate" class="panel panel-mc-pink">
             <div class="panel-heading">
                 <div class="panel-title mdt-title">Stylesheet</div>
@@ -267,7 +267,7 @@
                 <p>Also it require CSS animation from <code>animation.less</code>. But you can easily change it to your favorite animation library - for example <a href="https://github.com/daneden/animate.css" target="_blank">animate.css</a>. <br> See demo with animate.css <a href="http://codepen.io/zavoloklom/details/eNaEBM/" target="_blank" title="Demo with animate.css">on CodePen</a> or on this page in demo section.</p>
             </div>
         </section>
-        <p class="panel-tagline">Documentation</p>
+        <p class="list-subheader">Documentation</p>
         <section id="options" data-animation="animate" class="panel panel-mc-pink">
             <div class="panel-heading">
                 <div class="panel-title mdt-title">Options</div>
@@ -291,7 +291,7 @@
                     <em>default</em>: <code>false</code></p>
             </div>
         </section>
-        <p class="panel-tagline">Documentation</p>
+        <p class="list-subheader">Documentation</p>
         <section id="methods" data-animation="animate" class="panel panel-mc-pink">
             <div class="panel-heading">
                 <div class="panel-title mdt-title">Methods</div>
@@ -313,7 +313,7 @@
                 <p>Toggles a displaying element to shown or hidden.</p>
             </div>
         </section>
-        <p class="panel-tagline">Documentation</p>
+        <p class="list-subheader">Documentation</p>
         <section id="events" data-animation="animate" class="panel panel-mc-pink">
             <div class="panel-heading">
                 <div class="panel-title mdt-title">Events</div>
@@ -451,14 +451,14 @@
 
         // smoothScroll
         $('#nav a').smoothScroll({
-            offset: -90,
+            offset: -80,
             speed: 300,
             easing: 'swing',
             beforeScroll: function() {
                 $(this).addClass('active');
             },
             afterScroll: function() {
-                $(this).removeClass('active');
+                $(this).removeClass('active').blur();
             }
         });
 
