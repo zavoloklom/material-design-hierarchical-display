@@ -77,19 +77,28 @@ body {
 
 /* main panel */
 .main-panel .btn-lg {
-  margin: 10px 0;
-  font-size: 24px;
-  padding: 17px 30px;
+  min-width: 122px;
+  height: 48px;
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: .1px;
+  text-transform: uppercase;
+  line-height: 48px;
+
+  padding: 0 16px;
+  margin: 0 8px;
+  outline: 0;
+  outline-offset: 0;
+  border: 0;
+  border-radius: 2px;
+
   background-color: @mdc-pink-500;
   color: @mdc-white-darker;
-  border-color: @mdc-grey-200;
   transition: all 0.15s ease-in-out;
 }
 .main-panel .btn-lg:hover {
-  background-color: @mdc-grey-200;
-  color: @mdc-pink-500;
-  border-color: @mdc-grey-100;
-  text-shadow: none;
+  background-color: @mdc-pink-700;
+  color: @mdc-white-darker;
 }
 .main-panel h1, .jumbotron .h1 {
   //color: @mdc-black-dark;
