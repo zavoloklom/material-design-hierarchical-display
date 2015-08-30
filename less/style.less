@@ -53,19 +53,19 @@ body {
   background-size: 48px 48px;
 }
 .icon.chrome {
-  background-image: url("http://icons.iconarchive.com/icons/appicns/simplified-app/128/appicns-Chrome-icon.png");
+  background-image: url("../img/browsers/chrome.png");
 }
 .icon.safari {
-  background-image: url("http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/128/Internet-safari-icon.png");
+  background-image: url("../img/browsers/safari.png");
 }
 .icon.opera {
-  background-image: url("http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/128/Internet-opera-icon.png");
+  background-image: url("../img/browsers/opera.png");
 }
 .icon.firefox {
-  background-image: url("http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/128/Internet-firefox-icon.png");
+  background-image: url("../img/browsers/firefox.png");
 }
 .icon.msie {
-  background-image: url("http://icons.iconarchive.com/icons/cornmanthe3rd/metronome/128/Internet-ie-icon.png");
+  background-image: url("../img/browsers/ie.png");
 }
 /* main */
 .main {
@@ -256,8 +256,8 @@ body {
   color: @mdc-black-light;
 }
 .dropdown-header {
+  .zmdt-caption();
   padding: 8px 16px;
-  .mdt-caption();
   color: @mdc-black-darker;
 }
 .dropup .dropdown-menu {
@@ -270,55 +270,13 @@ body {
   margin-bottom: 30px;
 }
 
-b, strong {
-  font-weight: 500;
-}
-hr {
-  margin-top: 20px;
-  margin-bottom: 20px;
-  border: 0;
-  border-top: 1px solid @mdc-black-lighter;
-}
 
-code, kbd, pre, samp {
-  font-family: @font-family-monospace;
-}
-
-code {
-  padding: 2px 4px;
-  font-size: 90%;
-  color: @mdc-grey-700;
-  background-color: @mdc-black-lighter;
-  border-radius: 2px;
-}
-pre {
-  display: block;
-  padding: 8px;
-  margin: 0 0 8px;
-  font-size: 12px;
-  line-height: 20px;
-  color: @mdc-black-darker;
-  word-break: break-all;
-  word-wrap: break-word;
-  background-color: @mdc-grey-100;
-  border: 1px solid @mdc-grey-200;
-  border-radius: 2px;
-}
 
 
 /* modal */
 //
 // Modals
 // --------------------------------------------------
-
-.shadow-z-5 {
-  -webkit-box-shadow: 0 19px 38px rgba(0,0,0,.30),
-  0 15px 12px rgba(0,0,0,.22);
-  -moz-box-shadow:    0 19px 38px rgba(0,0,0,.30),
-  0 15px 12px rgba(0,0,0,.22);
-  box-shadow:         0 19px 38px rgba(0,0,0,.30),
-  0 15px 12px rgba(0,0,0,.22);
-}
 
 // .modal-open      - body class for killing the scroll
 // .modal           - container to scroll within
@@ -390,7 +348,7 @@ pre {
 
 // Title text within header
 .modal-title {
-  .mdt-title();
+  .zmdt-title();
   margin: 0;
 }
 

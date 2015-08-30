@@ -1,0 +1,87 @@
+// Grid system
+//
+// Generate semantic grid columns with these mixins.
+
+//## Centered container element
+.container-base {
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 @padding-base;
+  &:extend(.clearfix all);
+}
+
+// Framework grid generation based on bootstrap grid generator
+//
+
+//## Grid columns base values
+.make-grid-columns() {
+  // Common styles for all sizes of grid columns, widths 1-12
+  .col(@index) { // initial
+    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
+    .col((@index + 1), @item);
+  }
+  .col(@index, @list) when (@index =< @grid-columns) { // general; "=<" isn't a typo
+    @item: ~".col-xs-@{index}, .col-sm-@{index}, .col-md-@{index}, .col-lg-@{index}, .col-xl-@{index}";
+    .col((@index + 1), ~"@{list}, @{item}");
+  }
+  .col(@index, @list) when (@index > @grid-columns) { // terminal
+    @{list} {
+      position: relative;
+      flex: 0 0 auto;
+      // Inner gutter via padding
+      margin:  ceil((@grid-gutter-min / 2));
+      @media (min-width: @screen-xs-min) {
+        //margin:  ceil((@grid-gutter-max / 2));
+      }
+    }
+  }
+  .col(1); // kickstart it
+}
+
+//## Grid values for grid
+.calc-grid-column(@index, @class, @type) when (@type = width) and (@index > 0) {
+  .col-@{class}-@{index} {
+    flex-basis: calc(percentage((@index / @grid-columns)) ~"-" @grid-gutter-min) ;
+  }
+}
+.calc-grid-column(@index, @class, @type) when (@type = push) and (@index > 0) {
+  .col-@{class}-push-@{index} {
+    left: percentage((@index / @grid-columns));
+  }
+}
+.calc-grid-column(@index, @class, @type) when (@type = push) and (@index = 0) {
+  .col-@{class}-push-0 {
+    left: auto;
+  }
+}
+.calc-grid-column(@index, @class, @type) when (@type = pull) and (@index > 0) {
+  .col-@{class}-pull-@{index} {
+    right: percentage((@index / @grid-columns));
+  }
+}
+.calc-grid-column(@index, @class, @type) when (@type = pull) and (@index = 0) {
+  .col-@{class}-pull-0 {
+    right: auto;
+  }
+}
+.calc-grid-column(@index, @class, @type) when (@type = offset) {
+  .col-@{class}-offset-@{index} {
+    margin-left: percentage((@index / @grid-columns));
+  }
+}
+
+// Basic looping in LESS
+.loop-grid-columns(@index, @class, @type) when (@index >= 0) {
+  .calc-grid-column(@index, @class, @type);
+  // next iteration
+  .loop-grid-columns((@index - 1), @class, @type);
+}
+
+// Create grid for specific class
+.make-grid(@class) {
+  //.float-grid-columns(@class);
+  .loop-grid-columns(@grid-columns, @class, width);
+  .loop-grid-columns(@grid-columns, @class, pull);
+  .loop-grid-columns(@grid-columns, @class, push);
+  .loop-grid-columns(@grid-columns, @class, offset);
+}
