@@ -62,7 +62,6 @@
     <meta property="og:image"         content="http://zavoloklom.github.io/material-design-hierarchical-display/img/Material-Design-Hierarchical-Display.png" />
 </head>
 <body data-spy="scroll" data-offset="90" data-target=".navbar-collapse">
-<div id="fb-root"></div>
 <nav id="navbar" class="navbar navbar-default navbar-fixed-top hidden-print">
     <div class="container">
         <div class="navbar-header">
@@ -123,26 +122,7 @@
 
     <article id="social-buttons" class="panel panel-default hidden-xs">
         <div class="panel-body">
-            <ul class="list-inline">
-                <li>
-                    <a class="paypal btn btn-default btn-xs" href="https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business=s%2ekupletsky%40gmail%2ecom&lc=US&item_name=Material%20Design%20Hierarchical%20Display&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted" target="_blank">
-                        Support me via PayPal
-                    </a>
-                </li>
-                <li>
-                    <iframe src="http://ghbtns.com/github-btn.html?user=zavoloklom&repo=material-design-hierarchical-display&type=watch&count=true"
-                            allowtransparency="true" frameborder="0" scrolling="0" width="85" height="20"></iframe>
-                </li>
-                <li>
-                    <a href="https://twitter.com/share" class="twitter-share-button" data-url="http://zavoloklom.github.io/material-design-hierarchical-display" data-text="Material Design Hierarchical Display" data-via="zavoloklom" data-hashtags="materialDesign">Tweet</a>
-                </li>
-                <li>
-                    <div class="fb-share-button" data-href="http://zavoloklom.github.io/material-design-hierarchical-display/" data-layout="button_count"></div>
-                </li>
-                <li>
-                    <div class="g-plus" data-action="share" data-annotation="bubble" data-href="http://zavoloklom.github.io/material-design-hierarchical-display"></div>
-                </li>
-            </ul>
+            <div id="jssocial"></div>
         </div>
     </article>
 
@@ -417,6 +397,7 @@
                     <li><strong>jQuery Highlight</strong> by <a href="https://github.com/ematsakov/highlight" target="_blank">Evgeny Matsakov</a>.</li>
                     <li><strong>jQuery onScreen</strong> by <a href="https://github.com/silvestreh/onScreen" target="_blank">Silvestre Herrera</a>.</li>
                     <li><strong>jQuery Smooth Scroll</strong> by <a href="https://github.com/kswedberg/jquery-smooth-scroll" target="_blank">Karl Swedberg</a>.</li>
+                    <li><strong>Social Network Sharing jQuery Plugin</strong> by <a href="https://github.com/tabalinas/jssocials" target="_blank">Artem Tabalin</a>.</li>
                     <li><strong>Browsers Images</strong> by <a href="http://www.iconarchive.com/show/simplified-app-icons-by-appicns.html" target="_blank">Appicns</a> and <a href="http://www.iconarchive.com/show/metronome-icons-by-cornmanthe3rd.html" target="_blank">Cornmanthe3rd</a>.</li>
                     <li><strong>Header Image</strong> by <a href="http://www.artit-k.com/image-paper-color-material-design/" target="_blank">Artit Kiuwilai</a>.</li>
                 </ul>
@@ -430,14 +411,75 @@
 <script src="js/jquery.min.js"></script>
 <script src="//netdna.bootstrapcdn.com/bootstrap/3.3.0/js/bootstrap.min.js"></script>
 <script src='js/jquery.onscreen.min.js'></script>
-<!-- <script src='js/jquery.nav.js'></script> -->
 <script src="js/jquery.smooth-scroll.min.js"></script>
 <script src='js/jquery.zmd.hierarchical-display.js'></script>
 <script src="js/jquery.highlight.js"></script>
+<script src="js/jssocials.min.js"></script>
 <script>
     (function($) {
         $(document).ready(function(){
             $('pre.code').highlight({source:1, zebra:1, indent:'space', list:'ol'});
+            // Js-Socials
+            jsSocials.shares.paypal = {
+                label: "PayPal",
+                logo: "fa fa-paypal",
+                shareUrl: "https://www.paypal.com/cgi-bin/webscr?cmd=_donations&business={email}&lc=US&item_name={name}&currency_code=USD&bn=PP%2dDonationsBF%3abtn_donateCC_LG%2egif%3aNonHosted",
+                countUrl: ""
+            };
+            jsSocials.shares.github = {
+                label: "GitHub",
+                logo: "fa fa-github",
+                shareUrl: "https://github.com/zavoloklom/material-design-hierarchical-display",
+                countUrl: "https://api.github.com/repos/zavoloklom/material-design-hierarchical-display",
+                getCount: function(data) {
+                    return data.stargazers_count;
+                }
+            };
+            $("#jssocial").jsSocials({
+                shares: [
+                    {
+                        share: "paypal",
+                        label: "Donate with PayPal",
+                        logo: "zmdi zmdi-hc-fw zmdi-paypal",
+                        email: "s.kupletsky@gmail.com",
+                        name: "Material Design Hierarchical Display"
+                    },
+                    {
+                        share: "github",
+                        label: "Star",
+                        logo: "zmdi zmdi-hc-fw zmdi-github",
+                        user: "zavoloklom",
+                        repo: "material-design-hierarchical-display"
+                    },
+                    {
+                        share: "twitter",
+                        label: "Tweet",
+                        logo: "zmdi zmdi-hc-fw zmdi-twitter",
+                        via: "zavoloklom",
+                        hashtags: "materialDesign"
+                    },
+                    {
+                        share: "facebook",
+                        label: "Share",
+                        logo: "zmdi zmdi-hc-fw zmdi-facebook"
+                    },
+                    {
+                        share: "googleplus",
+                        label: "Share",
+                        logo: "zmdi zmdi-hc-fw zmdi-google-plus"
+                    },
+                    {
+                        share: "pinterest",
+                        label: "Pin it",
+                        logo: "zmdi zmdi-hc-fw zmdi-pinterest-box"
+                    }
+                ],
+                url: "http://zavoloklom.github.io/material-design-hierarchical-display/",
+                text: "Material Design Hierarchical Display",
+                user: "zavoloklom",
+                showLabel: true,
+                showCount: true
+            });
         });
         $('[data-animation="animate"]').onScreen({
             doIn: function() {
@@ -470,27 +512,8 @@
                 $(this).removeClass('active').blur();
             }
         });
-
-        // onePageNav
-        //$('#nav').onePageNav({
-        //    currentClass: 'active',
-        //    changeHash: true,
-        //    scrollSpeed: 750,
-        //    scrollThreshold: 0.5,
-        //    filter: '',
-        //    easing: 'swing'
-        //});
     })(jQuery);
 </script>
-
-<!-- Facebook share button -->
-<script>(function(d, s, id) {
-    var js, fjs = d.getElementsByTagName(s)[0];
-    if (d.getElementById(id)) return;
-    js = d.createElement(s); js.id = id;
-    js.src = "//connect.facebook.net/ru_RU/sdk.js#xfbml=1&version=v2.4&appId=368789203166494";
-    fjs.parentNode.insertBefore(js, fjs);
-}(document, 'script', 'facebook-jssdk'));</script>
 
 <!-- Google Adsense -->
 <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>

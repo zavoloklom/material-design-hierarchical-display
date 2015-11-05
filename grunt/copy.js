@@ -40,6 +40,16 @@ module.exports = {
             dest: 'js/'
         }]
     },
+    jssocial: {
+        files: [{
+            expand: true,
+            dot: true,
+            filter: 'isFile',
+            flatten: true,
+            src: 'bower_components/jssocials/dist/jssocials.min.js',
+            dest: 'js/'
+        }]
+    },
     onScreen: {
         files: [{
             expand: true,

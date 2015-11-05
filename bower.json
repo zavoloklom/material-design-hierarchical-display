@@ -26,6 +26,7 @@
     "material-design-typography": "*",
     "animate.css": "*",
     "jquery.highlight": "*",
+    "jssocials": "*",
     "onScreen": "*",
     "jquery-smooth-scroll": "~1.5.5"
   }
